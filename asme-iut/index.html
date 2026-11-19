@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3f1e8">
+<meta name="description" content="The official website of the ASME Student Section at Islamic University of Technology. Explore our activities, achievements and ways to get involved.">
+<title>ASME IUT Student Section | Engineering in the Field</title>
+<link rel="icon" type="image/png" href="./favicon.png">
+<style>
+.hero-visual{position:relative;width:100%;min-width:0}
+.hero-main-photo{width:100%;aspect-ratio:4/3;border-radius:var(--radius-2xl,24px);object-fit:cover;box-shadow:var(--elevation-card,0 10px 30px rgb(8 29 51 / 9%))}
+.hero-side-photo{position:absolute;bottom:var(--space-3,12px);left:var(--space-3,12px);width:32%;aspect-ratio:4/3;object-fit:cover;border:4px solid var(--color-surface,#fff);border-radius:var(--radius-lg,14px);box-shadow:var(--elevation-card,0 10px 30px rgb(8 29 51 / 9%))}
+.hero-visual img:focus-visible{position:relative;z-index:1}
+.hero-visual .hero-side-photo:focus-visible{position:absolute}
+.clipboard-fallback{position:fixed;inset:0 auto auto 0;opacity:0;pointer-events:none}
+:root{--navy:#081d33;--deep:#06172a;--navy2:#123c62;--blue:#146b9f;--aqua:#76d8f2;--line:#d8e4ec;--fog:#f4f8fb;--paper:#fff;--slate:#4f6274;--font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--radius:19px;--shadow:0 18px 60px rgba(8,29,51,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:#f7f9fb;font-family:var(--font);color:var(--navy);-webkit-font-smoothing:antialiased}button,a{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #28a9e2;outline-offset:4px}::selection{background:#9be2f7;color:#06172a}
+.shell{width:min(1190px,calc(100% - 64px));margin:0 auto}.skip{position:fixed;z-index:300;left:10px;top:-55px;background:white;padding:14px}.skip:focus{top:10px}
+.top-strip{background:#071a2e;color:#d6e4ec;font-size:12px;letter-spacing:.055em}.top-strip .shell{display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:36px}.top-strip strong{color:#e6f9ff;font-weight:650}.live-dot{display:inline-block;width:7px;height:7px;margin-right:9px;border-radius:50%;background:#68d6ac;box-shadow:0 0 0 4px rgba(104,214,172,.13)}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(19,59,94,.10)}.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:13px;min-width:260px}.brand-asset{width:94px;height:50px;object-fit:contain;object-position:center}.brand-rule{height:33px;width:1px;background:#c7d6e0}.brand-copy{white-space:nowrap;font-size:11px;font-weight:800;line-height:1.35;letter-spacing:.085em;text-transform:uppercase;color:#275677}.brand-copy strong{display:block;font-size:12px;letter-spacing:.025em;color:#0a243e}.nav-links{display:flex;align-items:center;gap:27px}.nav-links a{font-size:13px;font-weight:690;color:#466176;transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--blue)}.nav-cta,.pill-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 19px;font-size:13px;font-weight:800;white-space:nowrap}.nav-cta{background:var(--navy);color:#fff}.nav-cta:hover{background:var(--blue)}.menu-toggle{display:none;background:#f0f6f9;border:1px solid #dde8ef;border-radius:12px;padding:9px 11px;color:var(--navy)}
+.hero{position:relative;overflow:hidden;padding:82px 0 78px;background:#f4f9fc}.hero-grid{position:relative;display:grid;grid-template-columns:.97fr 1.03fr;gap:62px;align-items:center}.eyebrow{display:flex;gap:12px;align-items:center;color:#126a9e;font-size:11px;letter-spacing:.185em;font-weight:850;text-transform:uppercase}.eyebrow:before{content:"";width:29px;height:2px;background:#278fb7}.hero h1{margin:25px 0 21px;font-size:clamp(46px,4.6vw,70px);letter-spacing:-.065em;line-height:1.06;font-weight:850;max-width:680px}.hero h1 span{color:#12729c}.hero-desc{max-width:505px;line-height:1.83;font-size:17px;color:#516b7c;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:33px}.btn{border:0;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 25px;font-size:14px;font-weight:800;transition:transform .2s,background .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:#0c4874;color:white;box-shadow:0 7px 23px rgba(9,69,111,.2)}.btn-primary:hover{background:#0a679b}.btn-outline{background:white;color:#0a3d63;border:1px solid #ccdfea}.btn-outline:hover{border-color:#0a679b}.btn .play-ic{display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;width:21px;height:21px;font-size:9px;padding-left:1px}.hero-hint{display:flex;gap:21px;margin-top:33px;font-size:12px;font-weight:650;color:#678093}
+
+
+.section{padding:108px 0}.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:45px;margin-bottom:38px}.section-heading h2,.section h2{font-size:clamp(35px,3.4vw,51px);line-height:1.11;letter-spacing:-.052em;margin:16px 0 0;font-weight:835}.section-lede{font-size:16px;line-height:1.75;color:#617688;max-width:390px;margin:0}.overview-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:25px}.definition{padding:45px 44px;border-radius:25px;background:#fff;border:1px solid #e0eaf0;min-height:330px;display:flex;flex-direction:column;justify-content:space-between}.definition h3{font-size:clamp(25px,2.3vw,35px);line-height:1.28;letter-spacing:-.04em;margin:10px 0 24px;font-weight:760}.definition h3 em{color:#197cab;font-style:normal}.definition p{color:#526e81;line-height:1.85;margin:0;max-width:540px}.definition-footer{margin-top:27px;padding-top:21px;border-top:1px solid #e4edf2;font-size:12px;font-weight:650;color:#39779b}.stat-panel{position:relative;overflow:hidden;border-radius:25px;background:#0a2c49;color:#fff;padding:42px;display:flex;flex-direction:column;justify-content:space-between;min-height:330px}.stat-panel:before{content:"";position:absolute;right:-155px;top:-130px;width:370px;height:370px;border:1px solid rgba(148,212,241,.23);border-radius:50%;box-shadow:0 0 0 55px rgba(148,212,241,.035),0 0 0 110px rgba(148,212,241,.025)}.stat-panel h3{font-size:15px;margin:0 0 25px;color:#a4d7ec;font-weight:700;position:relative}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 13px;position:relative}.stat-number{display:block;font-size:clamp(32px,3vw,43px);letter-spacing:-.05em;font-weight:840}.stat-label{font-size:12px;color:#a9cadc;line-height:1.5}.stat-source{margin:30px 0 0;color:#8eb1c8;font-size:11px;position:relative;line-height:1.5}.value-row{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:22px}.value-card{padding:25px 23px;border:1px solid #dce9f0;background:#fff;border-radius:17px}.value-icon{font-size:25px;margin-bottom:17px}.value-card h4{margin:0 0 8px;font-size:16px;letter-spacing:-.015em}.value-card p{margin:0;font-size:13px;line-height:1.65;color:#668092}
+.path-section{padding:103px 0;background:#071d33;color:#fff;overflow:hidden;position:relative}.path-section:after{content:"";position:absolute;bottom:-240px;right:-140px;border:1px solid rgba(147,216,242,.16);width:650px;height:650px;border-radius:50%;box-shadow:0 0 0 85px rgba(147,216,242,.025),0 0 0 180px rgba(147,216,242,.02)}.path-section .shell{position:relative;z-index:2}.path-section .eyebrow{color:#9cd8ee}.path-section .eyebrow:before{background:#6fd4ea}.path-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:37px}.path-head h2{margin:17px 0 0}.path-head p{color:#a3c1d1;line-height:1.75;max-width:355px;font-size:15px;margin:0}.path-tabs{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}.path-tab{border:1px solid #345470;border-radius:99px;color:#cee1eb;background:transparent;padding:13px 17px;font-size:12px;font-weight:770;transition:.2s}.path-tab:hover{background:#123d5d}.path-tab[aria-selected="true"]{background:#c2efff;color:#092c49;border-color:#c2efff}.path-display{display:grid;grid-template-columns:1fr .9fr;min-height:340px;background:#113755;border:1px solid #28516e;border-radius:24px;overflow:hidden}.path-copy{padding:43px 45px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.path-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#89c6e3;font-weight:760}.path-copy h3{font-size:clamp(26px,2.8vw,37px);letter-spacing:-.05em;line-height:1.2;margin:14px 0 12px}.path-copy p{line-height:1.78;color:#d0e1ea;font-size:15px;max-width:480px;margin:0 0 23px}.path-link{border:0;background:none;color:#9bdef9;padding:0;font-weight:800;font-size:13px;border-bottom:1px solid #659ab8;padding-bottom:5px}.path-link:hover{color:white}.path-photo{width:100%;height:100%;max-height:440px;object-fit:cover;filter:saturate(.95)}
+.activity-section{background:#f8fafc}.filter-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:24px}.filter-btn{border:1px solid #dae6ec;background:#fff;border-radius:99px;padding:11px 19px;color:#587083;font-size:12px;font-weight:800}.filter-btn:hover{border-color:#85bacf}.filter-btn[aria-pressed="true"]{background:#0a3b5d;border-color:#0a3b5d;color:#fff}.activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.activity-card{background:#fff;border:1px solid #e1eaf0;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}.activity-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.activity-card[hidden]{display:none}.activity-image-wrap{height:223px;overflow:hidden;position:relative;background:#d3e5ef}.activity-image{height:100%;width:100%;object-fit:cover;transition:transform .5s}.activity-card:hover .activity-image{transform:scale(1.06)}.activity-index{position:absolute;top:17px;left:17px;border-radius:99px;padding:9px 13px;background:rgba(7,30,52,.91);color:#fff;font-size:10px;letter-spacing:.1em;font-weight:800;text-transform:uppercase}.activity-copy{padding:27px 27px 26px;display:flex;flex-direction:column;flex:1}.activity-copy h3{font-size:21px;line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}.activity-copy p{font-size:13px;color:#62788b;line-height:1.75;margin:0 0 22px;flex:1}.activity-button{border:0;background:none;color:#0b78a5;font-size:12px;font-weight:820;text-transform:uppercase;letter-spacing:.045em;padding:0;text-align:left;align-self:flex-start}.activity-button:hover{text-decoration:underline}.activity-empty{display:none;padding:24px;text-align:center;color:#557084}.activity-empty.show{display:block}
+.achievements{background:#ebf2f7;padding:108px 0}.achievement-top{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:23px}.achievement-feature{position:relative;display:flex;align-items:stretch;overflow:hidden;background:white;border:1px solid #d8e5ed;border-radius:23px;min-height:250px}.achievement-feature>img{width:43%;object-fit:cover;object-position:center}.achievement-feature-body{padding:30px 25px;flex:1;display:flex;justify-content:center;flex-direction:column}.award-label{font-size:10px;letter-spacing:.12em;color:#1782ad;font-weight:850;text-transform:uppercase}.achievement-feature h3{font-size:22px;margin:11px 0 8px;letter-spacing:-.035em}.achievement-feature p{font-size:13px;line-height:1.6;color:#62788a;margin:0}.achievement-twins{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.winner-heading{display:flex;justify-content:space-between;gap:25px;align-items:flex-end;margin:37px 0 20px}.winner-heading h3{font-size:26px;letter-spacing:-.035em;margin:0}.winner-heading p{margin:0;color:#5c7588;font-size:13px}.winner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.winner-card{background:white;border:1px solid #dbe6ed;border-radius:20px;padding:14px;overflow:hidden}.winner-card img{width:100%;height:205px;object-fit:cover;object-position:center 25%;border-radius:12px}.winner-card div{padding:14px 10px 7px}.winner-card h4{font-size:17px;margin:0 0 6px}.winner-card p{margin:0;font-size:12px;color:#5a7485;line-height:1.6}.winner-card strong{color:#116a9b}
+.resource-section{background:#fff}.resource-main{display:grid;grid-template-columns:.7fr 1.3fr;gap:28px;align-items:stretch}.scholarship-box{background:#102f4d;color:#fff;border-radius:24px;padding:37px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.scholarship-box img{height:75px;max-width:170px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1);opacity:.94}.scholarship-box h3{font-size:26px;letter-spacing:-.035em;line-height:1.2;margin:28px 0 14px}.scholarship-box p{color:#bbd3e3;font-size:13px;line-height:1.75;margin:0}.scholar-number{font-size:34px;font-weight:830;letter-spacing:-.045em;display:block;margin:12px 0 1px;color:#b5edff}.resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.resource-card{border:1px solid #dce7ee;border-radius:19px;padding:20px 23px;display:flex;gap:16px;align-items:center;background:#f9fcfe}.resource-card img{width:100px;height:85px;object-fit:contain;flex-shrink:0;border-radius:8px}.resource-card h3{font-size:16px;margin:0 0 7px;letter-spacing:-.02em}.resource-card p{margin:0;font-size:12px;line-height:1.62;color:#697e90}.resource-note{color:#7890a1;font-size:11px;line-height:1.6;margin:21px 0 0}
+.faq-section{background:#f2f6f9;padding:100px 0}.faq-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px}.faq-layout>div>p{font-size:15px;color:#63798b;line-height:1.78;max-width:300px}.faq-list{display:grid;gap:12px}.faq-item{border:1px solid #dce7ef;background:white;border-radius:15px;overflow:hidden}.faq-item summary{display:flex;align-items:center;gap:18px;justify-content:space-between;cursor:pointer;padding:21px 23px;font-weight:770;font-size:14px;list-style:none}.faq-item summary::-webkit-details-marker{display:none}.faq-item p{padding:0 23px 23px;margin:0;color:#5e788c;font-size:13px;line-height:1.9}
+.connect-section{background:#071d33;color:white;padding:88px 0 56px;position:relative;overflow:hidden}.connect-section:before{position:absolute;content:"";width:500px;height:500px;border:1px solid rgba(159,229,246,.18);border-radius:50%;right:-170px;top:-220px;box-shadow:0 0 0 65px rgba(159,229,246,.03),0 0 0 130px rgba(159,229,246,.025)}.connect-grid{display:grid;grid-template-columns:1fr .95fr;gap:70px;align-items:center;position:relative}.connect-section h2{font-size:clamp(38px,3.7vw,55px);max-width:520px;margin:15px 0 16px;letter-spacing:-.05em;line-height:1.1}.connect-section p{color:#b4ccda;line-height:1.7;font-size:15px;max-width:530px}.connect-actions{display:grid;gap:11px}.social-card{display:flex;justify-content:space-between;align-items:center;background:#123854;border:1px solid #295775;border-radius:14px;padding:18px 20px;gap:12px}.social-card span{font-size:11px;color:#90b5cc;font-weight:700;letter-spacing:.055em;text-transform:uppercase}.social-card strong{display:block;margin-top:4px;color:white;font-size:15px}.copy-btn{border:1px solid #49718a;background:transparent;color:#c9f1ff;padding:9px 13px;border-radius:99px;font-size:11px;font-weight:800}.copy-btn:hover{background:#215775}.footer{border-top:1px solid #254662;padding-top:29px;margin-top:69px;display:flex;justify-content:space-between;gap:20px;color:#829fb3;font-size:11px;line-height:1.7}.footer strong{color:#b8d8e9}.footer a:hover{text-decoration:underline}
+.dialog{border:0;padding:0;max-width:min(840px,calc(100% - 22px));width:100%;max-height:min(90vh,900px);border-radius:25px;overflow:auto;background:white;color:#082840;box-shadow:0 35px 110px rgba(0,0,0,.4)}.dialog::backdrop{background:rgba(4,18,34,.76);backdrop-filter:blur(5px)}.dialog-close{position:absolute;right:19px;top:17px;z-index:4;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:#082f4c;color:white;font-size:21px;width:40px;height:40px;display:grid;place-items:center}.detail-img{width:100%;max-height:360px;object-fit:cover;background:#cfe6f2}.detail-body{padding:32px 39px 39px}.detail-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:11px;color:#16729e;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.detail-body h2{margin:12px 0 14px;font-size:35px;line-height:1.13;letter-spacing:-.05em}.detail-body>p{font-size:15px;color:#526f82;line-height:1.82}.detail-points{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:24px 0}.detail-point{background:#f0f7fb;padding:19px;border-radius:14px}.detail-point strong{font-size:13px;display:block;color:#0e4972;margin-bottom:8px}.detail-point p{font-size:13px;line-height:1.65;margin:0;color:#59798c}.detail-gallery{display:flex;gap:10px;flex-wrap:wrap}.detail-gallery button{padding:4px;border-radius:10px;border:2px solid transparent;background:#edf5fa}.detail-gallery button[aria-pressed="true"]{border-color:#0c739e}.detail-gallery img{height:72px;width:100px;object-fit:cover;border-radius:6px}.detail-footnote{font-size:11px;color:#728a9a;margin-top:20px}
+.tour-dialog{border:0;padding:0;width:min(1050px,calc(100% - 30px));max-width:1050px;max-height:min(95vh,850px);border-radius:25px;overflow:hidden;background:#061e34;color:white;box-shadow:0 25px 120px rgba(0,0,0,.5)}.tour-dialog::backdrop{background:rgba(0,12,25,.91);backdrop-filter:blur(9px)}.tour-header{min-height:67px;display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:#07192d;border-bottom:1px solid #254761;gap:12px}.tour-header-brand{font-size:12px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.tour-header-brand span{color:#82c6e7}.tour-header-actions{display:flex;align-items:center;gap:9px}.tour-icon-btn{border:1px solid #315470;background:#102c47;color:#d5f0fd;border-radius:99px;padding:10px 14px;font-size:11px;font-weight:750}.tour-icon-btn[aria-pressed="true"]{background:#d4f5ff;color:#0b314e;border-color:#d4f5ff}.tour-x{border:0;background:transparent;color:#fff;font-size:26px;line-height:1;padding:0 4px 4px}.tour-main{display:grid;grid-template-columns:.96fr 1.04fr;min-height:487px}.tour-image-outer{position:relative;overflow:hidden;background:#1b4b6f}.tour-image{width:100%;height:100%;min-height:487px;object-fit:cover;object-position:center}.tour-photo-tag{position:absolute;bottom:20px;left:22px;background:rgba(4,25,43,.84);color:#d4ecf7;border:1px solid #65809a;padding:11px 14px;border-radius:11px;font-size:11px;font-weight:780}.tour-copy{padding:54px 49px 39px;display:flex;flex-direction:column;justify-content:center}.tour-count{color:#82c8e7;font-weight:800;letter-spacing:.16em;font-size:12px}.tour-copy h2{font-size:clamp(31px,3.6vw,49px);line-height:1.1;letter-spacing:-.048em;margin:20px 0 17px}.tour-copy p{line-height:1.8;font-size:16px;color:#bdd8e6;margin:0}.tour-takeaway{border-left:2px solid #80d7ed;color:#edfbff;padding:6px 0 6px 17px;font-size:13px;font-weight:700;line-height:1.65;margin-top:29px}.tour-bottom{padding:22px 25px 22px;background:#071a2f;border-top:1px solid #274863}.tour-track{display:flex;gap:6px;margin-bottom:19px}.tour-track-step{flex:1;height:4px;background:#31506a;border-radius:99px;overflow:hidden}.tour-track-step>i{display:block;height:100%;width:0;background:#8edff1;transition:width .25s}.tour-track-step.done>i{width:100%}.tour-controls{display:flex;align-items:center;justify-content:space-between;gap:15px}.tour-instructions{font-size:11px;color:#92afc3;line-height:1.6}.tour-nav{display:flex;align-items:center;gap:10px}.tour-nav button{border:1px solid #31516b;background:#10314f;color:#f2faff;padding:12px 17px;border-radius:99px;font-size:12px;font-weight:790}.tour-nav button.primary{background:#a3e3fa;color:#06253d;border-color:#a3e3fa}.tour-nav button:disabled{opacity:.36;cursor:not-allowed}.tour-timer{font-size:10px;color:#80b1cc}.toast{position:fixed;bottom:28px;left:50%;z-index:400;transform:translate(-50%,30px);opacity:0;pointer-events:none;background:#092b45;color:white;padding:13px 19px;border-radius:999px;box-shadow:var(--shadow);font-size:12px;font-weight:770;transition:.25s}.toast.show{transform:translate(-50%,0);opacity:1}
+@media(max-width:1050px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;padding:15px 22px 25px;border-bottom:1px solid #d7e6ef;box-shadow:0 16px 35px rgba(6,31,55,.07);flex-direction:column;align-items:stretch;gap:3px}.nav-links.open{display:flex}.nav-links a{padding:12px}.menu-toggle{display:block}.nav-cta{margin-left:auto;padding:11px 13px}.nav-links{gap:15px}.hero-grid{gap:25px}.hero h1{font-size:54px}.resource-card{padding:15px;gap:9px}.resource-card img{width:82px}}
+@media(max-width:820px){.shell{width:min(100% - 36px,680px)}.top-strip .shell{font-size:10px}.nav{min-height:73px}.brand{min-width:unset}.brand-asset{width:78px;height:43px}.brand-copy{font-size:10px}.hero{padding:62px 0 69px}.hero-grid{grid-template-columns:1fr;gap:25px}.hero h1{font-size:clamp(46px,9vw,67px)}.section,.achievements{padding:79px 0}.section-heading,.path-head{display:block}.section-lede,.path-head p{margin-top:18px;max-width:630px}.overview-grid,.path-display,.resource-main,.faq-layout,.connect-grid{grid-template-columns:1fr}.value-row{grid-template-columns:repeat(2,1fr)}.path-section{padding:78px 0}.path-copy{padding:32px}.path-photo{height:310px;max-height:310px}.activity-grid{grid-template-columns:repeat(2,1fr)}.achievement-top,.achievement-twins{grid-template-columns:1fr}.winner-grid{grid-template-columns:repeat(3,1fr)}.resource-main{gap:18px}.scholarship-box{min-height:290px}.faq-layout{gap:30px}.connect-grid{gap:20px}.tour-main{grid-template-columns:1fr 1fr}.tour-copy{padding:30px}.tour-image,.tour-main{min-height:410px}.footer{margin-top:48px}}
+@media(max-width:570px){.top-strip .shell{justify-content:center}.top-strip .meta-event{display:none}.brand-copy{font-size:9px}.brand-copy strong{font-size:10px}.nav-cta{font-size:0;gap:0;min-width:43px;height:40px;padding:0}.hero h1{font-size:clamp(43px,11.3vw,61px)}.hero-desc{font-size:15px}.hero-actions{display:grid;grid-template-columns:1fr;max-width:310px}.hero-hint{flex-wrap:wrap;gap:10px}.section-heading h2,.section h2{font-size:37px}.definition,.stat-panel{padding:28px;min-height:0}.definition h3{font-size:27px}.stats{gap:19px}.stat-number{font-size:32px}.value-row{gap:10px}.value-card{padding:21px 18px}.value-card h4{font-size:14px}.value-card p{font-size:12px}.path-tab{font-size:11px;padding:11px 13px}.path-copy{padding:29px}.path-copy h3{font-size:28px}.path-photo{height:240px;max-height:240px}.activity-grid,.resource-grid,.winner-grid{grid-template-columns:1fr}.activity-image-wrap{height:230px}.achievement-feature{min-height:220px}.achievement-feature-body{padding:20px 17px}.achievement-feature h3{font-size:19px}.winner-card{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:12px}.winner-card img{width:120px;height:135px}.winner-heading{display:block}.winner-heading p{margin-top:9px}.resource-card img{width:100px}.connect-section{padding-top:69px}.connect-section h2{font-size:38px}.footer{display:block}.footer p{margin-bottom:10px}.detail-body{padding:26px 22px}.detail-body h2{font-size:29px}.detail-points{grid-template-columns:1fr}.detail-img{height:245px}.tour-dialog{width:calc(100% - 12px);max-height:98vh;border-radius:16px;overflow:auto}.tour-header{padding:12px 14px}.tour-header-brand{font-size:10px}.tour-header-actions{gap:5px}.tour-icon-btn{font-size:10px;padding:9px}.tour-main{display:block;min-height:0}.tour-image{height:195px;min-height:195px}.tour-photo-tag{left:11px;bottom:10px;padding:7px 9px}.tour-copy{padding:22px 24px 25px}.tour-copy h2{font-size:29px;margin:11px 0}.tour-copy p{font-size:13px;line-height:1.65}.tour-takeaway{font-size:12px;margin-top:16px}.tour-bottom{padding:15px}.tour-controls{gap:10px}.tour-instructions{font-size:9px}.tour-nav button{padding:10px 13px;font-size:11px}.tour-nav{gap:6px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Accessible image viewer: full-resolution display, navigation, and download. */
+.zoomable-photo{cursor:zoom-in;transition:filter .2s ease}
+.zoomable-photo:hover{filter:brightness(.93)}
+.zoomable-photo:focus-visible{outline:4px solid #1f90d0;outline-offset:4px;border-radius:6px}
+.photo-hint{margin:12px 0 0!important;font-size:12px!important;color:#426d82!important}
+.photo-dialog{border:0;padding:0;width:min(1140px,calc(100vw - 22px));max-width:1140px;height:min(880px,calc(100dvh - 22px));max-height:calc(100dvh - 22px);border-radius:19px;background:#061a2c;color:#fff;box-shadow:0 22px 90px rgba(0,0,0,.6);overflow:hidden}
+.photo-dialog::backdrop{background:rgba(0,10,23,.91);backdrop-filter:blur(9px)}
+.photo-viewer{height:100%;display:flex;flex-direction:column;min-height:0}
+.photo-header{min-height:61px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 18px;border-bottom:1px solid rgba(255,255,255,.15)}
+.photo-header strong{font-size:13px;letter-spacing:.09em;text-transform:uppercase}
+.photo-header button,.photo-bottom button,.photo-bottom a{border:1px solid rgba(255,255,255,.25);background:#173c58;color:#fff;min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;padding:8px 14px;font-size:14px;text-decoration:none;cursor:pointer}
+.photo-header button:hover,.photo-bottom button:hover,.photo-bottom a:hover{background:#235d86}
+.photo-header button:focus-visible,.photo-bottom button:focus-visible,.photo-bottom a:focus-visible{outline:3px solid #4bbdff;outline-offset:2px}
+.photo-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:12px 18px;position:relative;background:#07101e}
+.photo-stage img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain}
+.photo-stage .photo-error{display:none;font-size:16px;line-height:1.5;text-align:center;padding:24px;color:#ffdcce}
+.photo-stage.is-error img{display:none}
+.photo-stage.is-error .photo-error{display:block}
+.photo-bottom{display:flex;align-items:center;gap:14px;justify-content:space-between;padding:12px 18px;min-height:75px;background:#09253c}
+.photo-bottom .photo-caption{margin:0;max-width:56ch;color:#d0e7f3;line-height:1.5;font-size:13px}
+.photo-bottom .photo-controls{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.photo-controls button:disabled{opacity:.32;cursor:not-allowed}
+.photo-count{white-space:nowrap;font-size:12px;color:#bdd4e3;margin:0 3px}
+@media(max-width:700px){.photo-dialog{height:calc(100dvh - 12px);max-height:calc(100dvh - 12px);width:calc(100vw - 12px);border-radius:12px}.photo-stage{padding:8px}.photo-header{min-height:54px;padding:8px 12px}.photo-bottom{align-items:stretch;flex-direction:column;padding:10px 12px;gap:9px}.photo-bottom .photo-controls{width:100%;justify-content:space-between}.photo-bottom .photo-caption{font-size:12px}}
+
+.tour-dialog.is-viewport-fullscreen{width:100%;height:100%;height:100dvh;max-width:none;max-height:none;margin:0;border-radius:0;overflow:auto;box-shadow:none}
+.tour-presentation.is-expanded{display:flex;flex-direction:column;min-height:100%;background:inherit}
+.tour-presentation:fullscreen{overflow:auto}
+.tour-presentation.is-expanded .tour-main{flex:1 0 auto}
+.footer-bottom p a{font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.backtop{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:inherit;text-decoration:underline;text-underline-offset:4px}
+.exhibit-line{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.hero h1 span{display:block}
+.about-photo{width:100%;aspect-ratio:2.4;object-fit:cover;margin-top:20px}
+.activity-copy .activity-index{position:static;align-self:flex-start;padding:0;background:none;color:#126a9e;margin-bottom:8px}
+.icon-library{position:absolute;pointer-events:none}
+.ms-icon{flex:none;inline-size:1.15rem;block-size:1.15rem;fill:currentColor;vertical-align:middle}
+.faq-icons{display:flex}
+.faq-icons .ms-icon:last-child,.faq-item[open] .faq-icons .ms-icon:first-child{display:none}
+.faq-item[open] .faq-icons .ms-icon:last-child{display:block}
+.edition-rail{padding:20px 0}
+.edition-stories{display:flex;flex-wrap:wrap;gap:16px;list-style:none;margin:0;padding:0}
+.chapter-logo{width:140px;height:auto}
+@media(max-width:570px){.nav-tour-label{display:none}}
+.visually-hidden{position:absolute;inline-size:1px;block-size:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.arrival-rule{display:none}
+.hero-secondary{display:inline-flex;align-items:center;gap:8px;min-height:44px;text-underline-offset:.24em;text-decoration:underline}
+</style>
+<!-- data-asme-enhancement: approved public design system -->
+<link rel="stylesheet" href="./styles/design-system.css">
+</head>
+<body>
+<!-- Google Material Symbols Outlined · Apache 2.0, styles/fonts/Material-Symbols-LICENSE.txt -->
+<svg class="icon-library" aria-hidden="true" width="0" height="0" focusable="false"><defs>
+<symbol id="ms-add" viewBox="0 -960 960 960"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></symbol>
+<symbol id="ms-arrow_back" viewBox="0 -960 960 960"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></symbol>
+<symbol id="ms-arrow_downward" viewBox="0 -960 960 960"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/></symbol>
+<symbol id="ms-arrow_forward" viewBox="0 -960 960 960"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></symbol>
+<symbol id="ms-arrow_outward" viewBox="0 -960 960 960"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></symbol>
+<symbol id="ms-arrow_upward" viewBox="0 -960 960 960"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></symbol>
+<symbol id="ms-check" viewBox="0 -960 960 960"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></symbol>
+<symbol id="ms-close" viewBox="0 -960 960 960"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></symbol>
+<symbol id="ms-content_copy" viewBox="0 -960 960 960"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></symbol>
+<symbol id="ms-fullscreen" viewBox="0 -960 960 960"><path d="M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z"/></symbol>
+<symbol id="ms-menu" viewBox="0 -960 960 960"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></symbol>
+<symbol id="ms-pause" viewBox="0 -960 960 960"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></symbol>
+<symbol id="ms-play_arrow" viewBox="0 -960 960 960"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></symbol>
+<symbol id="ms-remove" viewBox="0 -960 960 960"><path d="M200-440v-80h560v80H200Z"/></symbol>
+<symbol id="ms-volume_up" viewBox="0 -960 960 960"><path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/></symbol>
+<!-- Social brand marks from Bootstrap Icons v1.13.1 (MIT). -->
+<symbol id="social-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</symbol>
+<symbol id="social-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</symbol>
+<symbol id="social-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+</symbol>
+</defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="shell nav">
+<a href="#top" class="brand" aria-label="ASME IUT Student Section home"><img src="./media/logo.webp" width="320" height="202" class="brand-asset" data-image="logo" alt="ASME logo"><span class="brand-rule"></span><strong class="brand-copy">IUT Student Section</strong></a>
+<nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="#about">About ASME</a><a href="#discover">Your opportunities</a><a href="#activities">Our activities</a><a href="#achievements">Achievements</a><a href="#connect">Connect</a></nav>
+<button class="nav-cta" id="navTour" aria-label="Start guided tour"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-play_arrow"></use></svg> <span class="nav-tour-label">Guided tour</span></button><button type="button" class="menu-toggle" id="menuToggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-menu"></use></svg></button>
+</div></header>
+<main id="main" tabindex="-1">
+<section class="hero" id="top" tabindex="-1">
+  <div class="shell hero-grid">
+    <p class="exhibit-line">
+      <span>ASME IUT Student Section</span>
+      <span>Islamic University of Technology · Gazipur</span>
+      <span class="arrival-rule" aria-hidden="true"></span>
+    </p>
+    <div class="hero-editorial">
+      <h1>Engineering <span>in the field.</span></h1>
+      <p class="hero-desc">Follow ASME IUT students from a manufacturing floor to the pages of their own STEM magazine.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="heroTour" type="button">Start the tour <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button>
+        <a href="#activities" class="hero-secondary">Browse activities <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_forward"></use></svg></a>
+      </div>
+      <p class="hero-hint">8 chapters · Optional read-aloud</p>
+    </div>
+    <div class="hero-visual">
+      <img src="./media/hero-480.webp" width="800" height="600" srcset="./media/hero-480.webp 480w, ./media/hero.webp 800w" sizes="(max-width: 820px) 90vw, 52vw" data-image="hero" fetchpriority="high" class="hero-main-photo" alt="ASME IUT members visiting a manufacturing facility">
+      <img src="./media/heroAlt-480.webp" width="930" height="648" srcset="./media/heroAlt-480.webp 480w, ./media/heroAlt.webp 930w" sizes="(max-width: 820px) 31vw, 20vw" data-image="heroAlt" class="hero-side-photo" alt="Students attending an ASME orientation event">
+    </div>
+  </div>
+</section>
+<section class="edition-rail" aria-label="From the student section">
+  <div class="shell">
+    <div class="edition-heading">
+      <h2>From the student section</h2>
+      <button id="editionPause" class="edition-pause" type="button" hidden aria-label="Pause headline animation"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-pause"></use></svg></button>
+    </div>
+    <div class="edition-window" tabindex="0" aria-label="Student section headlines">
+      <div class="edition-track">
+        <ul class="edition-stories">
+          <li>Inside Walton Hi-Tech Industries</li>
+          <li>STEM Chronicles by undergraduates</li>
+          <li>PIXELATE digital poster competition</li>
+          <li>Community Impact Month outreach</li>
+          <li>Student achievements at ASME EFx</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about" class="section"><div class="shell">
+ <div class="section-heading"><div><h2>About ASME</h2></div><p class="section-lede">What the American Society of Mechanical Engineers does for students and working engineers.</p></div>
+ <div class="overview-grid"><div class="definition"><div><h3>American Society of Mechanical Engineers</h3><p>It is a not-for-profit professional organization that helps students and engineers exchange knowledge, develop skills, and grow professionally. It also provides engineering codes and standards, publications, conferences, and educational resources.</p></div><div class="definition-footer">At IUT, the student section brings that learning spirit into campus life.</div></div><div class="stat-panel"><h3>ASME at a glance</h3><div class="stats"><div><span class="stat-number">1880</span><span class="stat-label">Year founded</span></div><div><span class="stat-number"><span class="visually-hidden">78,000+</span><span aria-hidden="true" data-count="78000" data-suffix="+">78,000+</span></span><span class="stat-label">Members</span></div><div><span class="stat-number"><span class="visually-hidden">20,000+</span><span aria-hidden="true" data-count="20000" data-suffix="+">20,000+</span></span><span class="stat-label">Student members</span></div><div><span class="stat-number"><span class="visually-hidden">145+</span><span aria-hidden="true" data-count="145" data-suffix="+">145+</span></span><span class="stat-label">Countries with members</span></div></div><p class="stat-source">2026 reference figures.</p></div></div>
+ <div class="value-row"><div class="value-card"><h4>Learn beyond lectures</h4><p>Explore technical writing, professional resources and new engineering ideas.</p></div><div class="value-card"><h4>Meet your people</h4><p>Connect with fellow students, faculty, alumni and engineers.</p></div><div class="value-card"><h4>Experience industry</h4><p>See how engineering knowledge is applied in manufacturing.</p></div><div class="value-card"><h4>Show what you can do</h4><p>Take part in writing, poster presentations and technical challenges.</p></div></div>
+</div></section>
+<section class="path-section" id="discover"><div class="shell"><div class="path-head"><div><h2>Find an activity by interest</h2></div><p>Choose an interest to see a related student activity.</p></div><div class="path-tabs" role="tablist" aria-label="Explore your interests"><button class="path-tab" role="tab" id="tab-industry" aria-controls="path-panel" aria-selected="true" data-path="industry">Industry & manufacturing</button><button class="path-tab" role="tab" id="tab-research" aria-controls="path-panel" aria-selected="false" tabindex="-1" data-path="research">Writing & ideas</button><button class="path-tab" role="tab" id="tab-create" aria-controls="path-panel" aria-selected="false" tabindex="-1" data-path="create">Design & competitions</button><button class="path-tab" role="tab" id="tab-community" aria-controls="path-panel" aria-selected="false" tabindex="-1" data-path="community">Community impact</button><button class="path-tab" role="tab" id="tab-belong" aria-controls="path-panel" aria-selected="false" tabindex="-1" data-path="belong">Finding my community</button></div><div class="path-display" id="path-panel" role="tabpanel" aria-labelledby="tab-industry" tabindex="0"><div class="path-copy"><span class="path-kicker" id="path-kicker">See engineering in action</span><h3 id="path-title">Step inside real manufacturing.</h3><p id="path-text">Our industrial tour to Walton Hi-Tech Industries PLC connected what members study in class with large-scale manufacturing processes they could observe firsthand.</p><button id="path-link" class="path-link"><span>Explore the industrial tour</span> <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button></div><img src="./media/industrialMeeting-480.webp" width="590" height="443" loading="lazy" decoding="async" srcset="./media/industrialMeeting-480.webp 480w, ./media/industrialMeeting.webp 590w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="industrialMeeting" class="path-photo" id="path-image" alt="Members visiting an industrial facility"></div></div></section>
+<section class="section activity-section" id="activities"><div class="shell"><div class="section-heading"><div><h2>Student activities</h2></div><p class="section-lede">Explore our programs, projects, competitions and visits.</p></div><div class="filter-bar" aria-label="Filter activities"><button class="filter-btn" data-filter="all" aria-pressed="true">All activities</button><button class="filter-btn" data-filter="learning" aria-pressed="false">Learning</button><button class="filter-btn" data-filter="competition" aria-pressed="false">Competitions</button><button class="filter-btn" data-filter="industry" aria-pressed="false">Industry</button><button class="filter-btn" data-filter="community" aria-pressed="false">Community</button></div><div class="activity-grid">
+<article class="activity-card" data-category="community learning" id="activity-orientation"><div class="activity-image-wrap"><img src="./media/orientation-480.webp" width="930" height="648" decoding="async" srcset="./media/orientation-480.webp 480w, ./media/orientation.webp 930w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="orientation" class="activity-image" alt="ASME IUT orientation with students in an auditorium" loading="lazy"></div><div class="activity-copy"><span class="activity-index">Campus & community</span><h3>Orientation</h3><p>A welcoming beginning where newcomers discover the section's goals, meet the team and join in a quiz.</p><button class="activity-button" data-activity="orientation">Read story <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button></div></article>
+<article class="activity-card" data-category="learning" id="activity-stem"><div class="activity-image-wrap"><img src="./media/stemFront-480.webp" width="540" height="540" decoding="async" srcset="./media/stemFront-480.webp 480w, ./media/stemFront.webp 540w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="stemFront" class="activity-image" alt="STEM Chronicles magazine displayed on mobile devices" loading="lazy"></div><div class="activity-copy"><span class="activity-index">Learn & publish</span><h3>STEM Chronicles</h3><p>A flagship student-written e-magazine sharing science ideas and interviews with accomplished alumni.</p><button class="activity-button" data-activity="stem">Read story <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button></div></article>
+<article class="activity-card" data-category="competition learning" id="activity-writing"><div class="activity-image-wrap"><img src="./media/article-480.webp" width="756" height="756" decoding="async" srcset="./media/article-480.webp 480w, ./media/article.webp 756w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="article" class="activity-image" alt="Article Writing Competition award announcement" loading="lazy"></div><div class="activity-copy"><span class="activity-index">Technical writing</span><h3>Article Writing Competition</h3><p>Students across universities turn STEM topics such as nanotechnology and composites into written insights.</p><button class="activity-button" data-activity="writing">Read story <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button></div></article>
+<article class="activity-card" data-category="industry" id="activity-industry"><div class="activity-image-wrap"><img src="./media/industrial-480.webp" width="800" height="600" decoding="async" srcset="./media/industrial-480.webp 480w, ./media/industrial.webp 800w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="industrial" class="activity-image" alt="Students exploring a manufacturing plant during their industrial visit" loading="lazy"></div><div class="activity-copy"><span class="activity-index">Industrial exposure</span><h3>Industrial Tour</h3><p>On 25 July 2026, members visited Walton Hi-Tech Industries PLC to connect engineering theory with practice.</p><button class="activity-button" data-activity="industry">Read story <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button></div></article>
+<article class="activity-card" data-category="community" id="activity-outreach"><div class="activity-image-wrap"><img src="./media/outreach-480.webp" width="750" height="600" decoding="async" srcset="./media/outreach-480.webp 480w, ./media/outreach.webp 750w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="outreach" class="activity-image" alt="ASME IUT students at a community outreach program" loading="lazy"></div><div class="activity-copy"><span class="activity-index">Impact & sustainability</span><h3>Community Impact Month</h3><p>Members visited Rajab Ali Bidyaniketan and engaged young students on cleanliness and proper waste disposal.</p><button class="activity-button" data-activity="outreach">Read story <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button></div></article>
+<article class="activity-card" data-category="competition" id="activity-pixelate"><div class="activity-image-wrap"><img src="./media/pixelate-480.webp" width="1210" height="908" decoding="async" srcset="./media/pixelate-480.webp 480w, ./media/pixelate.webp 1210w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="pixelate" class="activity-image" alt="Technical poster presentations at PIXELATE" loading="lazy"></div><div class="activity-copy"><span class="activity-index">Creativity & competition</span><h3>PIXELATE</h3><p>A technical digital poster competition helping IUT undergraduates present their ideas and creativity.</p><button class="activity-button" data-activity="pixelate">Read story <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></button></div></article>
+</div><p id="emptyActivities" class="activity-empty">No activities in this category yet.</p></div></section>
+<section class="achievements" id="achievements"><div class="shell"><div class="section-heading"><div><h2>Student achievements</h2></div><p class="section-lede">Student results in engineering competitions and international programs.</p></div><div class="achievement-top"><article class="achievement-feature"><img src="./media/pitch-480.webp" width="864" height="864" decoding="async" srcset="./media/pitch-480.webp 480w, ./media/pitch.webp 864w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="pitch" alt="Maliha Rahman at the ASME EFx Bangladesh pitch competition" loading="lazy"><div class="achievement-feature-body"><span class="award-label">Champion · ASME EFx Bangladesh</span><h3>Maliha Rahman</h3><p>Champion of the Elevated Pitch segment at ASME EFx Bangladesh.</p></div></article><article class="achievement-feature"><img src="./media/huawei.webp" width="420" height="343" decoding="async" data-image="huawei" alt="Mahreen Zaman with her recognition certificate" loading="lazy"><div class="achievement-feature-body"><span class="award-label">Top 21 finalist · 2025</span><h3>Mahreen Zaman</h3><p>Named a Top 21 finalist in the Huawei Seeds for the Future program.</p></div></article></div><article class="achievement-feature" style="max-width:100%;min-height:213px"><img src="./media/cadcraft-480.webp" width="664" height="378" decoding="async" srcset="./media/cadcraft-480.webp 480w, ./media/cadcraft.webp 664w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="cadcraft" alt="CADCRAFT Niter IPE Fest champions on stage" loading="lazy" style="width:31%"><div class="achievement-feature-body"><span class="award-label">CADCRAFT · Niter IPE Fest</span><h3>Mehtab Nehal & Abdullah Roman</h3><p>Crowned champions at the CADCRAFT competition at Niter IPE Fest.</p></div></article><div class="winner-heading"><h3>Global poster competition recognition</h3><p>ASME E-Fests Technical Digital Poster Competition · 2026</p></div><div class="winner-grid"><article class="winner-card"><img src="./media/winner1-480.webp" width="756" height="756" decoding="async" srcset="./media/winner1-480.webp 480w, ./media/winner1.webp 756w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="winner1" alt="Poster congratulating Maliha Rahman for first place globally" loading="lazy"><div><h4>Maliha Rahman</h4><p><strong>1st place globally</strong> · Track One</p></div></article><article class="winner-card"><img src="./media/winner2-480.webp" width="756" height="756" decoding="async" srcset="./media/winner2-480.webp 480w, ./media/winner2.webp 756w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="winner2" alt="Poster congratulating Fariha Rahman for third place globally" loading="lazy"><div><h4>Fariha Rahman</h4><p><strong>3rd place globally</strong> · Track One</p></div></article><article class="winner-card"><img src="./media/winner3-480.webp" width="756" height="756" decoding="async" srcset="./media/winner3-480.webp 480w, ./media/winner3.webp 756w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="winner3" alt="Poster congratulating K W Rahman for third place globally" loading="lazy"><div><h4>K W Rahman</h4><p><strong>3rd place globally</strong> · Track Two</p></div></article></div></div></section>
+<section class="section resource-section" id="resources"><div class="shell"><div class="section-heading"><div><h2>ASME resources</h2></div><p class="section-lede">Explore ASME scholarships, publications and professional resources.</p></div><div class="resource-main"><div class="scholarship-box"><img src="./media/scholarship-480.webp" width="648" height="648" decoding="async" srcset="./media/scholarship-480.webp 480w, ./media/scholarship.webp 648w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="scholarship" loading="lazy" alt="ASME scholarship symbol"><div><h3>Engineering talent deserves opportunity.</h3><p>The ASME Foundation supports engineering students through scholarship programs.</p><span class="scholar-number"><span class="visually-hidden">$1.7M+</span><span aria-hidden="true" data-count="1.7" data-prefix="$" data-suffix="M+">$1.7M+</span></span><p>Historical scholarship support for more than 600 students. Eligibility and active programs should be checked with ASME.</p></div></div><div class="resource-grid"><article class="resource-card"><img src="./media/efests-480.webp" width="900" height="600" decoding="async" srcset="./media/efests-480.webp 480w, ./media/efests.webp 900w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="efests" alt="ASME Engineering Festivals E-Fests logo" loading="lazy"><div><h3>Engineering Festivals</h3><p>ASME E-Fests bring engineering challenges and experiences into an exciting community setting.</p></div></article><article class="resource-card"><img src="./media/library-480.webp" width="600" height="500" decoding="async" srcset="./media/library-480.webp 480w, ./media/library.webp 600w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="library" alt="ASME Digital Collection logo" loading="lazy"><div><h3>Digital Collection</h3><p>Journals, conference proceedings and eBooks for technical discovery.</p></div></article><article class="resource-card"><img src="./media/webinars-480.webp" width="896" height="504" decoding="async" srcset="./media/webinars-480.webp 480w, ./media/webinars.webp 896w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="webinars" alt="ASME career webinars material" loading="lazy"><div><h3>Career webinars</h3><p>Learning sessions exploring the next stages of an engineering career.</p></div></article><article class="resource-card"><img src="./media/emag-480.webp" width="640" height="536" decoding="async" srcset="./media/emag-480.webp 480w, ./media/emag.webp 640w" sizes="auto, (max-width: 570px) 100vw, 50vw" data-image="emag" alt="ASME E-Mag promotional image" loading="lazy"><div><h3>E-Mag</h3><p>An additional way to read engineering perspectives and updates.</p></div></article></div></div></div></section>
+<section class="faq-section" id="faq"><div class="shell faq-layout"><div><h2>Frequently asked questions</h2></div><div class="faq-list">
+<details class="faq-item"><summary>Is ASME only about mechanical engineering?<span class="faq-icons"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-add"></use></svg><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-remove"></use></svg></span></summary><p>ASME brings students and professionals together to share knowledge and develop skills across engineering disciplines. Ask the IUT Student Section about any specific membership criteria.</p></details>
+<details class="faq-item"><summary>What can I do in a student section?<span class="faq-icons"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-add"></use></svg><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-remove"></use></svg></span></summary><p>Our activities include orientations, alumni knowledge sharing, technical writing, poster contests, industrial visits and community outreach. The exact upcoming calendar may differ.</p></details>
+<details class="faq-item"><summary>Are there opportunities to present my own ideas?<span class="faq-icons"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-add"></use></svg><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-remove"></use></svg></span></summary><p>Yes. PIXELATE was a digital poster presentation competition, and the inter-university Article Writing Competition covered STEM topics including nanotechnology and composite materials. STEM Chronicles also publishes undergraduate writing.</p></details>
+<details class="faq-item"><summary>How does this connect to real engineering work?<span class="faq-icons"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-add"></use></svg><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-remove"></use></svg></span></summary><p>The 25 July 2026 visit to Walton Hi-Tech Industries PLC gave section members firsthand exposure to large-scale manufacturing. It is an example of connecting theory learned at university with practice in industry.</p></details>
+<details class="faq-item"><summary>Does ASME provide scholarships?<span class="faq-icons"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-add"></use></svg><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-remove"></use></svg></span></summary><p>The ASME Foundation offers scholarships for engineering students. Eligibility and awards depend on the current scholarship program.</p></details>
+<details class="faq-item"><summary>How can I connect with ASME IUT?<span class="faq-icons"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-add"></use></svg><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-remove"></use></svg></span></summary><p>Use the social channels in the footer to ask the student section about membership, upcoming events and ways to take part.</p></details>
+</div></div></section>
+</main>
+<footer class="connect-section site-footer" id="connect">
+  <div class="shell">
+    <div class="footer-main">
+      <div class="footer-identity">
+        <img src="./media/chapterLogo.webp" width="480" height="322" decoding="async" class="brand-asset chapter-logo" data-image="chapterLogo" loading="lazy" alt="ASME Islamic University of Technology Student Section logo">
+        <div>
+          <h2>ASME IUT Student Section</h2>
+          <p>Islamic University of Technology<br>Gazipur, Bangladesh</p>
+          <button id="footerTour" class="footer-tour" type="button"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-play_arrow"></use></svg> Guided tour</button>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h2>Connect with us</h2>
+        <ul class="connect-actions" aria-label="Social media profiles">
+        <li class="social-card"><div class="social-identity"><span class="social-icon"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#social-instagram"></use></svg></span><span><span class="social-platform">Instagram</span><span class="social-handle">@asme.iut</span></span></div><button class="copy-btn" type="button" data-copy="@asme.iut" aria-label="Copy Instagram handle"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-content_copy"></use></svg></button></li>
+        <li class="social-card"><a class="social-identity" href="https://www.facebook.com/ASMEIUT/"><span class="social-icon"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#social-facebook"></use></svg></span><span><span class="social-platform">Facebook</span><span class="social-handle">/ASMEIUT</span></span><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></a><button class="copy-btn" type="button" data-copy="ASMEIUT" aria-label="Copy Facebook handle"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-content_copy"></use></svg></button></li>
+        <li class="social-card"><a class="social-identity" href="https://www.linkedin.com/company/asmeiut/"><span class="social-icon"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#social-linkedin"></use></svg></span><span><span class="social-platform">LinkedIn</span><span class="social-handle">/asmeiut</span></span><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_outward"></use></svg></a><button class="copy-btn" type="button" data-copy="asmeiut" aria-label="Copy LinkedIn handle"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-content_copy"></use></svg></button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Powered by <a href="https://syedsystems.dev">Syed Systems</a></p>
+      <a id="backTop" class="backtop" href="#top">Back to top <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_upward"></use></svg></a>
+    </div>
+  </div>
+</footer>
+<dialog class="dialog" id="activityDialog" aria-labelledby="detail-title"><button type="button" class="dialog-close" id="activityClose" aria-label="Close activity details"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-close"></use></svg></button><img id="detail-img" class="detail-img" alt=""><div class="detail-body"><div class="detail-meta"><span id="detail-category"></span></div><h2 id="detail-title"></h2><p id="detail-intro"></p><div class="detail-points"><div class="detail-point"><strong>What happened</strong><p id="detail-what"></p></div><div class="detail-point"><strong>Why it matters</strong><p id="detail-why"></p></div></div><div class="detail-gallery" id="detail-gallery" aria-label="Browse pictures"></div></div></dialog>
+<dialog class="tour-dialog" id="tourDialog" aria-label="Self-guided ASME IUT presentation"><audio id="tourNarration" preload="none"></audio><div class="tour-presentation" id="tourPresentation"><div class="tour-header"><div class="tour-header-brand">ASME IUT <span>/ SELF-GUIDED STORY</span></div><div class="tour-header-actions"><button class="tour-icon-btn" id="audioToggle" aria-pressed="false" title="Narrate this slide aloud">Read aloud</button><button class="tour-icon-btn" id="autoToggle" aria-pressed="true" title="Pause or resume automatic tour">Pause</button><button class="tour-icon-btn" id="fullscreenToggle" aria-label="Fullscreen presentation" title="Fullscreen presentation"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-fullscreen"></use></svg> <span>Fullscreen</span></button><button class="tour-x" id="tourClose" aria-label="Close guided tour"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-close"></use></svg></button></div></div><div class="tour-main"><div class="tour-image-outer"><img class="tour-image" id="tour-image" alt=""><span class="tour-photo-tag" id="tour-tag"></span></div><div class="tour-copy"><div class="tour-count" id="tour-count" role="status"></div><h2 id="tour-title"></h2><p id="tour-description"></p><div class="tour-takeaway" id="tour-takeaway"></div></div></div><div class="tour-bottom"><div class="tour-track" id="tour-track" aria-label="Tour progress"></div><div class="tour-controls"><div class="tour-instructions">Tap Next, use ← → keys, or let the story advance.<br><span class="tour-timer" id="tour-timer">Auto-advance is on</span><span class="tour-audio-status" id="tour-audio-status" role="status"></span></div><div class="tour-nav"><button id="tourPrev"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_back"></use></svg> Back</button><button class="primary" id="tourNext"><span>Next</span> <svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_forward"></use></svg></button></div></div></div></div></dialog>
+
+<dialog id="photoDialog" class="photo-dialog" aria-label="Full size photo viewer">
+  <div class="photo-viewer">
+    <div class="photo-header"><strong>ASME IUT / Photo gallery</strong><button id="photoClose" aria-label="Close full size photo" type="button"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-close"></use></svg> Close</button></div>
+    <div class="photo-stage" id="photoStage"><img id="photoImage" alt=""><p class="photo-error" id="photoError" role="alert">This photograph could not be displayed. Select another photo or try again.</p></div>
+    <div class="photo-bottom"><div><p class="photo-caption" id="photoCaption"></p><p class="photo-caption" id="photoSaveStatus" role="status"></p></div><div class="photo-controls"><button id="photoPrev" type="button" aria-label="Previous photo"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_back"></use></svg></button><span class="photo-count" id="photoCount"></span><button id="photoNext" type="button" aria-label="Next photo"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_forward"></use></svg></button><a id="photoSave" download="asme-iut-photo.webp" aria-label="Save this original picture"><svg class="ms-icon" aria-hidden="true" focusable="false"><use href="#ms-arrow_downward"></use></svg> Save</a></div></div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+<script>
+const IMAGES={"logo":"./media/logo.webp","hero":"./media/hero.webp","heroAlt":"./media/heroAlt.webp","orientation":"./media/orientation.webp","orientationGroup":"./media/orientationGroup.webp","stemCover":"./media/stemCover.webp","stemFront":"./media/stemFront.webp","stemInterview1":"./media/stemInterview1.webp","stemInterview2":"./media/stemInterview2.webp","article":"./media/article.webp","industrial":"./media/industrial.webp","industrialMeeting":"./media/industrialMeeting.webp","outreach":"./media/outreach.webp","outreachAward":"./media/outreachAward.webp","pixelate":"./media/pixelate.webp","pixelatePrize":"./media/pixelatePrize.webp","scholarship":"./media/scholarship.webp","efests":"./media/efests.webp","library":"./media/library.webp","emag":"./media/emag.webp","webinars":"./media/webinars.webp","pitch":"./media/pitch.webp","huawei":"./media/huawei.webp","cadcraft":"./media/cadcraft.webp","winner1":"./media/winner1.webp","winner2":"./media/winner2.webp","winner3":"./media/winner3.webp","footerBackground":"./media/footerBackground.webp","chapterLogo":"./media/chapterLogo.webp"};
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+$$('img[data-image]').forEach(el=>{const key=el.dataset.image;if(IMAGES[key]&&!el.hasAttribute('src'))el.src=IMAGES[key]});
+const toast=$('#toast');let toastTimeout;
+function sayToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>toast.classList.remove('show'),2300)}
+const menuToggle = $('#menuToggle');
+const mainNav = $('#nav-links');
+function setMenu(open) {
+  mainNav.classList.toggle('open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.querySelector('use').setAttribute('href', open ? '#ms-close' : '#ms-menu');
+}
+menuToggle.addEventListener('click', () => setMenu(!mainNav.classList.contains('open')));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !document.querySelector('dialog[open]') && mainNav.classList.contains('open')) {
+    setMenu(false);
+    menuToggle.focus();
+  }
+});
+$$('.nav-links a').forEach(link => link.addEventListener('click', () => {
+  if (!mainNav.classList.contains('open')) return;
+  setMenu(false);
+  const destination = $(link.hash);
+  destination.tabIndex = -1;
+  destination.focus({preventScroll:true});
+}));
+
+
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+$('#backTop').addEventListener('click', event => {
+  event.preventDefault();
+  $('#top').focus({preventScroll:true});
+  window.scrollTo({top:0, behavior:reducedMotion.matches ? 'auto' : 'smooth'});
+});
+
+const PATHS={
+ industry:{k:'SEE ENGINEERING IN ACTION',t:'Step inside real manufacturing.',d:'Our industrial tour to Walton Hi-Tech Industries PLC connected what members study in class with large-scale manufacturing processes they could observe firsthand.',img:'industrialMeeting',alt:'ASME IUT students during the Walton Hi-Tech visit',cta:'Explore the industrial tour',activity:'industry'},
+ research:{k:'WRITE, LEARN, SHARE',t:'Turn curiosity into something others can read.',d:'STEM Chronicles features undergraduate science writing and conversations with alumni, while the article writing contest gives students a place to explain technical ideas.',img:'stemInterview2',alt:'STEM Chronicles alumni interview feature',cta:'Explore STEM Chronicles',activity:'stem'},
+ create:{k:'DESIGN & PRESENT',t:'Show the idea, not just the answer.',d:'With PIXELATE and the inter-university article writing contest, students put their technical thinking into work that peers can see and discuss.',img:'pixelate',alt:'Pixelate engineering posters',cta:'Explore PIXELATE',activity:'pixelate'},
+ community:{k:'ENGINEERING WITH PURPOSE',t:'Make a difference beyond the lab.',d:'For ASME Community Impact Month, members visited Rajab Ali Bidyaniketan to discuss cleanliness and responsible waste disposal with younger students.',img:'outreachAward',alt:'Student section volunteers at outreach program',cta:'Explore the outreach program',activity:'outreach'},
+ belong:{k:'FIND YOUR PEOPLE',t:'Begin with a hello. Build with a team.',d:'The orientation introduced freshers to the section through faculty and executive interaction, a quiz and a community photo session.',img:'orientationGroup',alt:'Group photo from ASME orientation',cta:'Explore the orientation',activity:'orientation'}
+};
+const pathTabs = $$('[data-path]');
+const pathLink = $('#path-link');
+let selectedPath = 'industry';
+
+function selectPath(tab) {
+  selectedPath = tab.dataset.path;
+  pathTabs.forEach(button => {
+    button.setAttribute('aria-selected', String(button === tab));
+    button.tabIndex = button === tab ? 0 : -1;
+  });
+  const path = PATHS[selectedPath];
+  $('#path-panel').setAttribute('aria-labelledby', tab.id);
+  $('#path-kicker').textContent = path.k;
+  $('#path-title').textContent = path.t;
+  $('#path-text').textContent = path.d;
+  setPicture($('#path-image'), path.img, path.alt);
+  pathLink.querySelector('span').textContent = path.cta;
+}
+
+pathTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectPath(tab));
+  tab.addEventListener('keydown', event => {
+    const last = pathTabs.length - 1;
+    const targets = {ArrowRight:index === last ? 0 : index + 1, ArrowLeft:index === 0 ? last : index - 1, Home:0, End:last};
+    if (!Object.hasOwn(targets, event.key)) return;
+    event.preventDefault();
+    const next = pathTabs[targets[event.key]];
+    selectPath(next);
+    next.focus();
+  });
+});
+selectPath(pathTabs[0]);
+pathLink.addEventListener('click', () => openActivity(PATHS[selectedPath].activity));
+
+
+$$('.filter-btn').forEach(b=>b.addEventListener('click',()=>{const cat=b.dataset.filter;$$('.filter-btn').forEach(other=>other.setAttribute('aria-pressed',String(other===b)));let count=0;$$('.activity-card').forEach(card=>{const yes=cat==='all'||card.dataset.category.split(' ').includes(cat);card.hidden=!yes;if(yes)count++});$('#emptyActivities').classList.toggle('show',!count)}));
+const ACTIVITIES={
+ orientation:{title:'Orientation',category:'CAMPUS & COMMUNITY',intro:'An entry point for freshers to understand the student section and meet its community.',what:'New students learned about the section’s goals and initiatives, participated in a quiz, and joined a photo session with faculty and executives.',why:'It makes a large engineering community more approachable and helps newcomers feel ready to participate.',images:['orientation','orientationGroup']},
+ stem:{title:'STEM Chronicles',category:'STUDENT PUBLICATION',intro:'The section’s first flagship e-magazine is written by undergraduates who are curious about science and technology.',what:'Its features cover diverse STEM subjects, including alumni interviews on plastics engineering and the journey of studying abroad.',why:'Writing and interviewing encourage technical communication, curiosity, and exposure to real career experiences.',images:['stemCover','stemFront','stemInterview1','stemInterview2']},
+ writing:{title:'Article Writing Competition',category:'INTER-UNIVERSITY CONTEST',intro:'An opportunity to explore technical topics through clear, structured writing.',what:'Students from universities wrote articles on STEM topics, including nanotechnology, composite materials and other engineering concepts.',why:'Explaining a complex idea in writing is a skill that matters in research, engineering documentation and professional communication.',images:['article']},
+ industry:{title:'Industrial Tour · Walton Hi-Tech',category:'INDUSTRIAL EXPOSURE',intro:'A visit to Walton Hi-Tech Industries PLC on 25 July 2026 connected textbook engineering with an industrial setting.',what:'Section members gained firsthand exposure to large-scale manufacturing processes and practical industrial applications.',why:'Seeing manufacturing at scale helps students connect equipment, processes and production systems with concepts they learn in class.',images:['industrial','industrialMeeting']},
+ outreach:{title:'Community Impact Month Outreach',category:'COMMUNITY & ENVIRONMENT',intro:'The student section used engineering awareness to encourage cleaner everyday practices.',what:'Members visited Rajab Ali Bidyaniketan and held an interactive session on cleanliness, correct waste disposal and maintaining a clean environment.',why:'Technical education matters beyond campus when students use it to support healthier, more sustainable communities.',images:['outreach','outreachAward']},
+ pixelate:{title:'PIXELATE',category:'DIGITAL POSTER COMPETITION',intro:'A platform for IUT undergraduate students to present their ideas creatively through digital technical posters.',what:'The competition invited students to combine technical knowledge with visual communication in poster presentations.',why:'Engineering ideas become stronger when students learn to communicate the problem, design and result in a compelling way.',images:['pixelate','pixelatePrize']}
+};
+const activityDialog=$('#activityDialog');const detailImg=$('#detail-img');
+function openActivity(key){const a=ACTIVITIES[key];if(!a)return;$('#detail-title').textContent=a.title;$('#detail-category').textContent=a.category;$('#detail-intro').textContent=a.intro;$('#detail-what').textContent=a.what;$('#detail-why').textContent=a.why;const gallery=$('#detail-gallery');gallery.innerHTML='';a.images.forEach((img,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show photo '+(i+1));b.setAttribute('aria-pressed',String(i===0));const image=document.createElement('img');image.src=IMAGES[img];image.dataset.image=img;image.alt='Photo '+(i+1)+' from '+a.title;b.append(image);b.addEventListener('click',()=>{setPicture(detailImg, img, image.alt);gallery.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))});gallery.append(b)});setPicture(detailImg, a.images[0], 'Photo of '+a.title);activityDialog.showModal();}
+$$('[data-activity]').forEach(b=>b.addEventListener('click',()=>openActivity(b.dataset.activity)));
+$('#activityClose').addEventListener('click',()=>activityDialog.close());activityDialog.addEventListener('click',e=>{if(e.target===activityDialog)activityDialog.close()});
+
+const SLIDES=[
+ {title:'Welcome to ASME IUT.',description:'A student-led engineering community at the Islamic University of Technology. Discover how members learn, collaborate, explore industry and make an impact.',takeaway:'This is a community for people who are curious about engineering.',img:'orientationGroup',tag:'01 · Our community'},
+ {title:'What is ASME?',description:'The American Society of Mechanical Engineers is a not-for-profit professional organization. It provides a wider network for sharing engineering knowledge, learning and professional development.',takeaway:'Think of ASME as a bridge between learning engineering and growing as an engineer.',img:'footerBackground',tag:'02 · A global professional organization'},
+ {title:'Knowledge is meant to be shared.',description:'STEM Chronicles is a student-created e-magazine with science writing and alumni interviews. The section also organizes STEM article writing competitions.',takeaway:'Engineers do more than solve problems. They explain ideas clearly.',img:'stemInterview1',tag:'03 · STEM Chronicles and writing'},
+ {title:'Engineering beyond the classroom.',description:'On 25 July 2026, the section toured Walton Hi-Tech Industries PLC to see real, large-scale manufacturing processes and how theoretical ideas appear in industry.',takeaway:'From textbook concepts to the factory floor.',img:'industrial',tag:'04 · Industrial tour'},
+ {title:'Make your ideas visible.',description:'PIXELATE invites students to show their technical creativity through digital poster presentations. Competing helps turn curiosity into work others can understand.',takeaway:'Learn it. Build it. Present it.',img:'pixelate',tag:'05 · Technical creativity'},
+ {title:'Engineering is also service.',description:'During ASME Community Impact Month, members visited Rajab Ali Bidyaniketan to talk with younger students about cleanliness and responsible waste disposal.',takeaway:'Engineering can contribute to a cleaner, more sustainable community.',img:'outreach',tag:'06 · Community outreach'},
+ {title:'Our students are achieving.',description:'The section celebrates championship wins at ASME EFx Bangladesh and CADCRAFT, a Huawei Seeds for the Future finalist, and global digital-poster competition placements.',takeaway:'These achievements show what is possible when students take initiative.',img:'winner1',tag:'07 · Student achievements'},
+ {title:'Curious? Connect with us.',description:'Find the ASME student section at Islamic University of Technology through the social channels on this website. Ask us about current activities and how to get involved.',takeaway:'Your first step can be as simple as starting a conversation.',img:'orientation',tag:'08 · Join the conversation'}
+];
+const TOUR_RECORDINGS = [{"duration":17.544,"source":"./media/narration/chapter-01.mp3"},{"duration":19.44,"source":"./media/narration/chapter-02.mp3"},{"duration":17.904,"source":"./media/narration/chapter-03.mp3"},{"duration":18.816,"source":"./media/narration/chapter-04.mp3"},{"duration":15.048,"source":"./media/narration/chapter-05.mp3"},{"duration":17.928,"source":"./media/narration/chapter-06.mp3"},{"duration":18.696,"source":"./media/narration/chapter-07.mp3"},{"duration":16.872,"source":"./media/narration/chapter-08.mp3"}];
+const tourDialog=$('#tourDialog');let tourIndex=0,tourAuto=true,tourAudio=false,tourTimeout=null,tourStart=0,tourDuration=0,tourInterval=null;
+const track=$('#tour-track');track.innerHTML=SLIDES.map(()=>'<span class="tour-track-step"><i></i></span>').join('');
+const narrationPlayer = $('#tourNarration');
+let narrationRequest = 0;
+function stopSpeech() {
+  narrationRequest += 1;
+  narrationPlayer.pause();
+  narrationPlayer.removeAttribute('src');
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+}
+function handleNarrationError() {
+  tourAudio = false;
+  updateAudioButton();
+  $('#tour-audio-status').textContent = 'Read-aloud is unavailable. You can still read the chapter.';
+}
+function narrate() {
+  stopSpeech();
+  $('#tour-audio-status').textContent = '';
+  if (!tourAudio) return;
+  const request = narrationRequest;
+  const recording = TOUR_RECORDINGS[tourIndex];
+  if (recording) {
+    narrationPlayer.src = recording.source;
+    narrationPlayer.play().catch(() => {
+      if (request === narrationRequest) handleNarrationError();
+    });
+    return;
+  }
+  if (!('speechSynthesis' in window)) {
+    handleNarrationError();
+    return;
+  }
+  const { title, description, takeaway } = SLIDES[tourIndex];
+  const speech = new SpeechSynthesisUtterance([title, description, takeaway].join(' '));
+  const voices = window.speechSynthesis.getVoices().filter(voice => /^en[-_]/i.test(voice.lang));
+  speech.voice = voices.find(voice => /natural|enhanced|premium|neural/i.test(voice.name)) ||
+    voices.find(voice => voice.default) || voices[0] || null;
+  speech.lang = speech.voice?.lang || 'en-US';
+  speech.rate = .93;
+  speech.onerror = () => { if (request === narrationRequest) handleNarrationError(); };
+  window.speechSynthesis.speak(speech);
+}
+function stopClock(){if(tourTimeout){clearTimeout(tourTimeout);tourTimeout=null}if(tourInterval){clearInterval(tourInterval);tourInterval=null}}
+function advanceClock(){stopClock();if(!tourAuto)return;const slide=SLIDES[tourIndex];tourDuration=Math.min(26000,Math.max(14000,Math.round((slide.description.length+slide.title.length)/12)*1000));if(tourAudio&&TOUR_RECORDINGS[tourIndex])tourDuration=Math.max(tourDuration,TOUR_RECORDINGS[tourIndex].duration*1000+500);tourStart=Date.now();const fill=track.children[tourIndex].firstElementChild;const tick=()=>{const elapsed=Date.now()-tourStart;fill.style.width=Math.min(100,elapsed/tourDuration*100)+'%';$('#tour-timer').textContent='Auto-advance in '+Math.max(0,Math.ceil((tourDuration-elapsed)/1000))+'s'};tick();tourInterval=setInterval(tick,150);tourTimeout=setTimeout(()=>{if(tourIndex===SLIDES.length-1){tourAuto=false;updateAutoButton();$('#tour-timer').textContent='Tour complete. Explore the site below.';stopClock()}else setSlide(tourIndex+1)},tourDuration)}
+function updateAudioButton(){$('#audioToggle').textContent=tourAudio?'Read-aloud on':'Read aloud';$('#audioToggle').setAttribute('aria-pressed',String(tourAudio))}
+function updateAutoButton(){$('#autoToggle').textContent=tourAuto?'Pause':'Auto-play';$('#autoToggle').setAttribute('aria-pressed',String(tourAuto))}
+function setSlide(i){stopClock();tourIndex=Math.max(0,Math.min(SLIDES.length-1,i));const s=SLIDES[tourIndex];$('#tour-count').textContent='CHAPTER '+String(tourIndex+1).padStart(2,'0')+' / '+String(SLIDES.length).padStart(2,'0');$('#tour-title').textContent=s.title;$('#tour-description').textContent=s.description;$('#tour-takeaway').textContent=s.takeaway;setPicture($('#tour-image'), s.img, s.tag);$('#tour-tag').textContent=s.tag;Array.from(track.children).forEach((el,j)=>{el.classList.toggle('done',j<tourIndex);el.firstElementChild.style.width=j===tourIndex?'0':j<tourIndex?'100%':'0'});$('#tourPrev').disabled=tourIndex===0;$('#tourNext span').textContent=tourIndex===SLIDES.length-1?'Finish':'Next';$('#tourNext use').setAttribute('href',tourIndex===SLIDES.length-1?'#ms-check':'#ms-arrow_forward');$('#tour-timer').textContent=tourAuto?'Auto-advance is on':'Auto-advance is paused';narrate();advanceClock()}
+function startTour(){tourAuto=!reducedMotion.matches;tourAudio=false;updateAutoButton();updateAudioButton();tourDialog.showModal();setSlide(0)}
+['navTour','heroTour','footerTour'].forEach(id=>$('#'+id).addEventListener('click',startTour));
+async function closeTour() {
+  stopClock();
+  stopSpeech();
+  if (inNativeFullscreen()) await exitTourFullscreen();
+  tourDialog.close();
+}
+$('#tourClose').addEventListener('click',closeTour);
+$('#tourPrev').addEventListener('click',()=>setSlide(tourIndex-1));
+$('#tourNext').addEventListener('click',()=>{if(tourIndex===SLIDES.length-1)closeTour();else setSlide(tourIndex+1)});
+const tourPresentation = $('#tourPresentation');
+const fullscreenToggle = $('#fullscreenToggle');
+let fullscreenPending = false;
+const inNativeFullscreen = () => document.fullscreenElement === tourPresentation;
+const inViewportFullscreen = () => tourDialog.classList.contains('is-viewport-fullscreen');
+
+function updateFullscreenControl() {
+  const expanded = inNativeFullscreen() || inViewportFullscreen();
+  fullscreenToggle.setAttribute('aria-pressed', String(expanded));
+  const label = expanded ? 'Exit fullscreen' : 'Fullscreen';
+  fullscreenToggle.title = label + ' presentation';
+  fullscreenToggle.setAttribute('aria-label', fullscreenToggle.title);
+  fullscreenToggle.querySelector('span').textContent = label;
+  tourPresentation.classList.toggle('is-expanded', expanded);
+}
+
+async function exitTourFullscreen() {
+  tourDialog.classList.remove('is-viewport-fullscreen');
+  if (inNativeFullscreen()) await document.exitFullscreen().catch(() => {});
+  updateFullscreenControl();
+}
+
+document.addEventListener('fullscreenchange', updateFullscreenControl);
+fullscreenToggle.setAttribute('aria-pressed', 'false');
+fullscreenToggle.addEventListener('click', async () => {
+  if (fullscreenPending) return;
+  fullscreenPending = true;
+  try {
+    if (inNativeFullscreen() || inViewportFullscreen()) {
+      await exitTourFullscreen();
+    } else if (document.fullscreenEnabled && tourPresentation.requestFullscreen) {
+      try {
+        await tourPresentation.requestFullscreen();
+      } catch {
+        if (tourDialog.open) tourDialog.classList.add('is-viewport-fullscreen');
+      }
+      if (!tourDialog.open) await exitTourFullscreen();
+    } else {
+      tourDialog.classList.add('is-viewport-fullscreen');
+    }
+  } finally {
+    fullscreenPending = false;
+    updateFullscreenControl();
+  }
+});
+
+tourDialog.addEventListener('cancel', event => {
+  if (inNativeFullscreen() || inViewportFullscreen()) {
+    event.preventDefault();
+    void exitTourFullscreen();
+    return;
+  }
+  stopClock();
+  stopSpeech();
+});
+$('#autoToggle').addEventListener('click',()=>{tourAuto=!tourAuto;updateAutoButton();if(tourAuto){if(tourIndex===SLIDES.length-1)setSlide(0);else advanceClock()}else{stopClock();$('#tour-timer').textContent='Paused — use arrows to continue';track.children[tourIndex].firstElementChild.style.width='0'}});
+$('#audioToggle').addEventListener('click',()=>{tourAudio=!tourAudio;updateAudioButton();narrate();if(tourAudio&&tourAuto)advanceClock()});
+tourDialog.addEventListener('close', () => {
+  stopClock();
+  stopSpeech();
+  void exitTourFullscreen();
+});
+tourDialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();if(tourIndex<SLIDES.length-1)setSlide(tourIndex+1)}else if(e.key==='ArrowLeft'){e.preventDefault();if(tourIndex>0)setSlide(tourIndex-1)}});
+$$('.copy-btn').forEach(button => button.addEventListener('click', async () => {
+  const handle = button.dataset.copy;
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(handle);
+    copied = true;
+  } catch {
+    const backup = document.createElement('textarea');
+    backup.value = handle;
+    backup.readOnly = true;
+    backup.className = 'clipboard-fallback';
+    document.body.append(backup);
+    backup.select();
+    try {
+      copied = document.execCommand('copy');
+    } catch {
+      copied = false;
+    } finally {
+      backup.remove();
+      button.focus({preventScroll:true});
+    }
+  }
+  sayToast(copied ? 'Copied ' + handle : 'Could not copy. The handle is ' + handle);
+}));
+
+// Full-size image viewer. Images are embedded in the HTML, so this works offline
+// and on GitHub Pages without third-party requests or missing asset paths.
+const photoDialog = $('#photoDialog');
+const photoImage = $('#photoImage');
+const photoStage = $('#photoStage');
+let photoItems = [], photoIndex = 0, photoReturnFocus = null, photoTourWasPlaying = false;
+function photoEntry(img) {
+  const original = IMAGES[img.dataset.image];
+  return {key:img.dataset.image, src:original ? new URL(original, document.baseURI).href : img.currentSrc || img.src, alt:img.alt || 'ASME IUT photograph'};
+}
+function photoGalleryFor(img){
+  if(img.id==='detail-img') {
+    const gallery = [...document.querySelectorAll('#detail-gallery img')].map(photoEntry);
+    return gallery.length ? gallery : [photoEntry(img)];
+  }
+  if(img.id==='tour-image' || img.id==='path-image') return [photoEntry(img)];
+  const section = img.closest('section');
+  const peers = section ? [...section.querySelectorAll('img.zoomable-photo')].filter(x=>x.src) : [img];
+  return peers.length ? peers.map(photoEntry) : [photoEntry(img)];
+}
+function showPhoto(index){
+  photoIndex = Math.max(0,Math.min(photoItems.length-1,index));
+  const item=photoItems[photoIndex];
+  photoStage.classList.remove('is-error');
+  photoImage.alt=item.alt;
+  photoImage.src=item.src;
+  $('#photoCaption').textContent=item.alt;
+  $('#photoCount').textContent=photoItems.length>1 ? `${photoIndex+1} / ${photoItems.length}` : '1 / 1';
+  $('#photoPrev').disabled=photoIndex===0;
+  $('#photoNext').disabled=photoIndex===photoItems.length-1;
+  const save=$('#photoSave');save.href=item.src;
+  $('#photoSaveStatus').textContent='';
+  save.download=`asme-iut-photo-${String(photoIndex+1).padStart(2,'0')}.webp`;
+}
+function openPhoto(img){
+  const {src}=photoEntry(img);
+  if(!src){sayToast('This picture has not loaded yet. Please try again.');return}
+  photoItems=photoGalleryFor(img);
+  photoIndex=Math.max(0,photoItems.findIndex(e=>e.src===src));
+  photoReturnFocus=document.activeElement;
+  photoTourWasPlaying=Boolean(tourDialog.open && tourAuto);
+  if(photoTourWasPlaying)stopClock();
+  showPhoto(photoIndex);
+  photoDialog.showModal();
+  $('#photoClose').focus();
+}
+function setPicture(image, key, alt) {
+  if (image.dataset.image !== key || !image.hasAttribute('src')) {
+    image.removeAttribute('srcset');
+    image.removeAttribute('sizes');
+    image.dataset.image = key;
+    image.src = IMAGES[key];
+  }
+  image.alt = alt;
+  if (image.classList.contains('zoomable-photo')) image.setAttribute('aria-label', 'Enlarge photograph: ' + alt);
+}
+function readyZoomImages(){
+  document.querySelectorAll('img:not(.brand-asset):not(#photoImage):not(#detail-gallery img)').forEach(img=>{
+    if(img.classList.contains('zoomable-photo'))return;
+    img.classList.add('zoomable-photo');
+    img.setAttribute('role','button');
+    img.setAttribute('tabindex','0');
+    img.setAttribute('aria-label','Enlarge photograph: '+(img.alt || 'ASME IUT photo'));
+    img.setAttribute('title','Tap or press Enter to view full image');
+    img.addEventListener('click',()=>openPhoto(img));
+    img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPhoto(img)}});
+  });
+}
+readyZoomImages();
+photoImage.addEventListener('error',()=>photoStage.classList.add('is-error'));
+photoImage.addEventListener('load',()=>photoStage.classList.remove('is-error'));
+let offlinePhotos;
+$('#photoSave').addEventListener('click', async event => {
+  const save = event.currentTarget;
+  if (location.protocol !== 'file:' || !save.href.startsWith('file:')) return;
+  event.preventDefault();
+  const {key} = photoItems[photoIndex];
+  const filename = save.download;
+  try {
+    offlinePhotos ??= new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = './scripts/offline-photos.js';
+      script.onload = () => { resolve(window.asmeOfflinePhotos); script.remove(); };
+      script.onerror = () => { reject(new Error('Offline photo files unavailable')); script.remove(); };
+      document.head.append(script);
+    });
+    const original = (await offlinePhotos)?.[key];
+    if (!original) throw new Error('Original photo unavailable');
+    const download = document.createElement('a');
+    download.href = original;
+    download.download = filename;
+    download.click();
+  } catch {
+    offlinePhotos = null;
+    $('#photoSaveStatus').textContent = 'Could not save this photo. Please try again.';
+  }
+});
+$('#photoClose').addEventListener('click',()=>photoDialog.close());
+$('#photoPrev').addEventListener('click',()=>showPhoto(photoIndex-1));
+$('#photoNext').addEventListener('click',()=>showPhoto(photoIndex+1));
+photoDialog.addEventListener('click',e=>{if(e.target===photoDialog)photoDialog.close()});
+photoDialog.addEventListener('keydown',e=>{
+ if(e.key==='ArrowLeft' && photoIndex>0){e.preventDefault();showPhoto(photoIndex-1)}
+ if(e.key==='ArrowRight' && photoIndex<photoItems.length-1){e.preventDefault();showPhoto(photoIndex+1)}
+});
+photoDialog.addEventListener('close',()=>{
+ if(photoTourWasPlaying && tourDialog.open && tourAuto)advanceClock();
+ photoTourWasPlaying=false;
+ if(photoReturnFocus && photoReturnFocus.isConnected)photoReturnFocus.focus({preventScroll:true});
+});
+let touchStartX=null;
+photoStage.addEventListener('touchstart',e=>{touchStartX=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+photoStage.addEventListener('touchcancel',()=>{touchStartX=null},{passive:true});
+photoStage.addEventListener('touchend',e=>{
+ if(touchStartX===null)return;
+ const delta=e.changedTouches[0]?.clientX-touchStartX;
+ touchStartX=null;
+ if(Math.abs(delta)>60){if(delta<0&&photoIndex<photoItems.length-1)showPhoto(photoIndex+1);else if(delta>0&&photoIndex>0)showPhoto(photoIndex-1)}
+},{passive:true});
+
+</script>
+<script defer src="./vendor/gsap.min.js"></script>
+<script defer src="./scripts/design-motion.js"></script>
+</body>
+</html>
